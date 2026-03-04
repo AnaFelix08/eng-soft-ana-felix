@@ -18,13 +18,18 @@ O custo de um processo judicial e dano reputacional é potencialmente muito maio
 
 ---
 **Solução proposta:**
---
+---
 **1.** Revisar e balancear os dados de treinamento para reduzir o viés na origem
---
+
+---
+
 **2.** Fazer revisão humana em casos de menor pontuação, para evitar decisões automatizadas (conforme a LGPD)
---
+
+---
+
 **3.** Criar métricas internas de viés e realizar auditorias periódicas após o lançamento.
---
+
+---
 
 Ao corrigir o viés dos dados, incluir supervisão humana estratégica e implementar monitoramento contínuo, a startup garante que o sistema respeite os direitos dos candidatos, atenda os padrões profissionais e minimize riscos jurídicos.
 
