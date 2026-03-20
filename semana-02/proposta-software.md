@@ -34,3 +34,4 @@ O custo de um processo judicial e dano reputacional é potencialmente muito maio
 Ao corrigir o viés dos dados, incluir supervisão humana estratégica e implementar monitoramento contínuo, a startup garante que o sistema respeite os direitos dos candidatos, atenda os padrões profissionais e minimize riscos jurídicos.
 
 ---
+*Professor: Vocês ganharam 4 softcoins!*
