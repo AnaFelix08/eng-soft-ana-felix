@@ -1,0 +1,18 @@
+sequenceDiagram
+
+participant Sensor as Sensor Cardíaco
+participant App as App Mobile
+participant Servidor
+participant Medico as Tablet do Médico
+
+Sensor->>App: Enviar dados cardíacos
+
+App->>App: Analisar sinais
+
+alt Alteração detectada
+    App->>Servidor: Solicitar histórico do paciente
+    Servidor-->>App: Retornar histórico
+    Servidor->>Medico: Enviar alerta imediato
+else Dados normais
+    App-->>Sensor: Monitoramento contínuo
+end
