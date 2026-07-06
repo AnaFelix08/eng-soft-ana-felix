@@ -1,0 +1,33 @@
+flowchart TD
+
+A([Início])
+
+subgraph Usuario
+B[Aproxima o celular]
+end
+
+subgraph App
+C[Receber identificação]
+D[Validar reserva]
+E{Reserva ativa?}
+end
+
+subgraph Hardware
+F[Enviar comando para fechadura]
+G[Destrancar porta]
+H[Negar acesso]
+end
+
+I([Fim])
+
+A --> B
+B --> C
+C --> D
+D --> E
+
+E -- Sim --> F
+F --> G
+G --> I
+
+E -- Não --> H
+H --> I
