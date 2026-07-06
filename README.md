@@ -26,5 +26,6 @@ Clique nos links abaixo para acessar os arquivos de cada semana:
 * 📄 [Semana 09 - Modelagem de Sistemas e MDE - Hotel Bela Vista ](./semana-09)
 * 📄 [Semana 10 - Exercícios de Revisão de Modelagem de Sistema Arquivo ](./semana-10)
 * 📄 [Semana 11, 12 e 13 - Projeto de Arquitetura - Aula Invertida ](./semana-11)
+* 📄 [Semana 14, 15, 16, 17, 18 e 19 - Projeto Final ](./semana-14)
 
 ---
