@@ -1,0 +1,55 @@
+classDiagram
+
+class Usuario{
+    +id : int
+    +nome : string
+    +login : string
+    +senha : string
+    +perfil : string
+}
+
+class Hospede{
+    +id : int
+    +nome : string
+    +cpf : string
+    +telefone : string
+    +dataNascimento : date
+}
+
+class TipoQuarto{
+    +id : int
+    +nome : string
+    +descricao : string
+    +precoBase : decimal
+}
+
+class Quarto{
+    +id : int
+    +numero : int
+    +status : StatusQuarto
+}
+
+class Reserva{
+    +id : int
+    +dataEntrada : date
+    +dataSaida : date
+    +status : string
+}
+
+class Consumo{
+    +id : int
+    +descricao : string
+    +valor : decimal
+    +data : date
+    +hora : time
+}
+
+TipoQuarto "1" --> "*" Quarto
+
+Hospede "1" --> "*" Reserva
+
+Quarto "1" --> "*" Reserva
+
+Reserva "1" --> "*" Consumo
+
+Usuario "1" --> "*" Consumo
