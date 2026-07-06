@@ -1,4 +1,4 @@
-# Semana 11 - Padrões de Arquitetura na Web
+# Semana 11 - Backend for Frontend (BFF)
 
 ## Disciplina
 
@@ -6,29 +6,22 @@ Engenharia de Software
 
 ## Objetivo
 
-Apresentar e analisar um padrão moderno de arquitetura de software, estabelecendo uma comparação com os padrões clássicos descritos por Ian Sommerville.
+Apresentar o padrão arquitetural Backend for Frontend (BFF), analisando suas características, vantagens, desvantagens e sua relação com os padrões clássicos de arquitetura descritos por Ian Sommerville.
 
-## Tema da apresentação
+## Tema
 
-**(Coloque aqui o tema que seu grupo apresentou.)**
-
-Exemplos:
-
-- Microsserviços
-- Serverless (FaaS)
-- Arquitetura Hexagonal
-- Arquitetura Orientada a Eventos (EDA)
-- Backend for Frontend (BFF)
+**Backend for Frontend (BFF)**
 
 ## Conteúdo abordado
 
-A apresentação contempla:
+A apresentação contempla os seguintes tópicos:
 
-- Definição técnica do padrão de arquitetura;
-- Comparação com os padrões clássicos de Sommerville;
+- Definição técnica do padrão BFF;
+- Problema que essa arquitetura busca resolver;
+- Comparação com os padrões clássicos apresentados por Sommerville;
 - Análise dos impactos em desempenho, segurança e manutenibilidade;
-- Exemplo de utilização em sistemas reais.
+- Exemplo de aplicação em sistemas reais.
 
 ## Arquivos
 
-- `apresentacao-padroes-arquitetura-web.pdf` — Versão em PDF da apresentação.
+- `Backend For Frontend (1).pdf` — Apresentação desenvolvida para a atividade da Semana 11 sobre o padrão arquitetural Backend for Frontend (BFF).
