@@ -1,0 +1,33 @@
+flowchart LR
+
+Recepcionista[👤 Recepcionista]
+Camareira[👤 Camareira]
+Funcionario[👤 Funcionário]
+Dono[👤 Dono]
+
+UC1([Realizar Login])
+UC2([Cadastrar Hóspede])
+UC3([Buscar Hóspede])
+UC4([Criar Reserva])
+UC5([Realizar Check-in])
+UC6([Registrar Consumo])
+UC7([Realizar Check-out])
+UC8([Atualizar Status da Limpeza])
+UC9([Gerar Relatório Financeiro])
+UC10([Gerenciar Tipos de Quartos])
+
+Recepcionista --> UC1
+Recepcionista --> UC2
+Recepcionista --> UC3
+Recepcionista --> UC4
+Recepcionista --> UC5
+Recepcionista --> UC6
+Recepcionista --> UC7
+
+Funcionario --> UC6
+
+Camareira --> UC8
+
+Dono --> UC9
+Dono --> UC10
+Dono --> UC1
