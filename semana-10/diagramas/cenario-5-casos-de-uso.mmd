@@ -1,0 +1,26 @@
+flowchart LR
+
+Cliente([Cliente])
+Profissional([Profissional])
+Pagamento[(Sistema de Pagamento)]
+
+UC1([Buscar Profissionais])
+UC2([Filtrar por Localização])
+UC3([Filtrar por Disponibilidade])
+UC4([Contratar Serviço])
+UC5([Liberar Pagamento])
+UC6([Avaliar Profissional])
+
+Cliente --> UC1
+Cliente --> UC4
+Cliente --> UC6
+
+Profissional --> UC4
+
+UC1 -. <<include>> .-> UC2
+UC1 -. <<include>> .-> UC3
+
+UC4 --> UC5
+UC5 --> Pagamento
+
+UC6 -. <<extend>> .-> UC5
