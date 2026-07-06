@@ -22,6 +22,7 @@ Clique nos links abaixo para acessar os arquivos de cada semana:
 * 📄 [Semana 04 - Desenvolvimento Ágil ](./semana-04)
 * 📄 [Semana 05 - Método C.A.R.D ](./semana-05)
 * 📄 [Semana 06 - Levantamento de Requisitos - Hotel Bela Vista ](./semana-06)
-* 📄 [Semana 07 e 08 - Especificação e Validação de Requisitos - Hotel Bela Vista ](./semana-08)
+* 📄 [Semana 07 e 08 - Especificação e Validação de Requisitos - Hotel Bela Vista ](./semanas-07-e-08)
+* 📄 [Semana 09 - Modelagem de Sistemas e MDE - Hotel Bela Vista ](./semana-09)
 
 ---
