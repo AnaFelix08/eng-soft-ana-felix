@@ -10,14 +10,40 @@ Cada cenário foi modelado utilizando o tipo de diagrama mais adequado, consider
 
 # Cenário 1 – Logística de E-commerce Global
 
-## Diagrama utilizado
+## Diagrama de Casos de Uso
 
-Diagrama de Casos de Uso
+O sistema é responsável pelo gerenciamento do despacho de mercadorias. Para realizar essa atividade, consulta o estoque interno, verifica o status da transportadora e envia os dados necessários para a Receita Federal emitir a nota fiscal.
 
-**Objetivo:**
+```mermaid
+flowchart LR
 
-Representar os atores externos e as funcionalidades do sistema de despacho de mercadorias.
+Cliente([Operador Logístico])
 
+Sistema((Sistema de Despacho))
+
+Estoque[(Estoque Interno)]
+Transportadora[(Transportadora)]
+Receita[(Receita Federal)]
+
+UC1([Consultar Estoque])
+UC2([Consultar Status da Transportadora])
+UC3([Gerenciar Despacho])
+UC4([Emitir Nota Fiscal])
+
+Cliente --> UC3
+
+UC3 --> UC1
+UC3 --> UC2
+UC3 --> UC4
+
+UC1 --> Estoque
+UC2 --> Transportadora
+UC4 --> Receita
+```
+
+### Explicação
+
+O diagrama evidencia a fronteira do sistema e mostra as integrações com sistemas externos, como Estoque, Transportadora e Receita Federal.
 ---
 
 # Cenário 2 – Totem de Autoatendimento em Fast-Food
