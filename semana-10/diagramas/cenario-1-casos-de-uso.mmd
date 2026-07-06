@@ -1,0 +1,24 @@
+flowchart LR
+
+Cliente([Operador Logístico])
+
+Sistema((Sistema de Despacho))
+
+Estoque[(Estoque Interno)]
+Transportadora[(Transportadora)]
+Receita[(Receita Federal)]
+
+UC1([Consultar Estoque])
+UC2([Consultar Status da Transportadora])
+UC3([Gerenciar Despacho])
+UC4([Emitir Nota Fiscal])
+
+Cliente --> UC3
+
+UC3 --> UC1
+UC3 --> UC2
+UC3 --> UC4
+
+UC1 --> Estoque
+UC2 --> Transportadora
+UC4 --> Receita
