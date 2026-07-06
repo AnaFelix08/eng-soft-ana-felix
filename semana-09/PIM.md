@@ -32,6 +32,50 @@ Os diagramas desenvolvidos representam os principais requisitos funcionais do si
 
 ---
 
+# Diagrama de Casos de Uso
+
+O diagrama de casos de uso apresenta os principais atores do sistema e as funcionalidades disponíveis para cada perfil de usuário.
+
+```mermaid
+flowchart LR
+
+Recepcionista[👤 Recepcionista]
+Camareira[👤 Camareira]
+Funcionario[👤 Funcionário]
+Dono[👤 Dono]
+
+UC1([Realizar Login])
+UC2([Cadastrar Hóspede])
+UC3([Buscar Hóspede])
+UC4([Criar Reserva])
+UC5([Realizar Check-in])
+UC6([Registrar Consumo])
+UC7([Realizar Check-out])
+UC8([Atualizar Status da Limpeza])
+UC9([Gerar Relatório Financeiro])
+UC10([Gerenciar Tipos de Quartos])
+
+Recepcionista --> UC1
+Recepcionista --> UC2
+Recepcionista --> UC3
+Recepcionista --> UC4
+Recepcionista --> UC5
+Recepcionista --> UC6
+Recepcionista --> UC7
+
+Funcionario --> UC6
+
+Camareira --> UC8
+
+Dono --> UC9
+Dono --> UC10
+Dono --> UC1
+```
+
+### Explicação
+
+Este diagrama apresenta os quatro perfis de usuários identificados nos requisitos (Dono, Recepcionista, Camareira e Funcionário) e as funcionalidades que cada um pode executar dentro do sistema. Ele fornece uma visão geral das interações antes do detalhamento da estrutura (Diagrama de Classes), da interação (Diagrama de Sequência) e do comportamento (Diagrama de Estados).
+
 # Diagrama de Classes
 
 O diagrama de classes apresenta as principais entidades do sistema e seus relacionamentos.
