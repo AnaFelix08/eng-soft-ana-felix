@@ -1,0 +1,22 @@
+flowchart LR
+
+Cliente([Cliente])
+Cozinheiro([Cozinheiro])
+
+Pagamento[(Sistema de Pagamento<br/>PIX/Cartão)]
+Fidelidade[(Sistema de Fidelidade)]
+
+UC1([Realizar Pedido])
+UC2([Efetuar Pagamento])
+UC3([Enviar Pedido para Cozinha])
+UC4([Atualizar Pontos de Fidelidade])
+
+Cliente --> UC1
+Cliente --> UC2
+
+UC1 --> UC3
+UC2 --> Pagamento
+UC2 --> UC4
+
+UC3 --> Cozinheiro
+UC4 --> Fidelidade
