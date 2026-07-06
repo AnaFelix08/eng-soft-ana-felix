@@ -166,16 +166,50 @@ O diagrama de atividades representa o fluxo de execução do processo de acesso 
 
 # Cenário 5 – Marketplace de Serviços Domésticos
 
-## Diagrama utilizado
+## Diagrama de Casos de Uso
 
-Diagrama de Casos de Uso
+Neste cenário, o cliente busca profissionais disponíveis para realizar um serviço doméstico. Durante a busca, o sistema obrigatoriamente filtra os profissionais por localização e disponibilidade. Após a execução do serviço, o pagamento é liberado e o cliente pode avaliar o profissional.
 
-**Objetivo:**
+```mermaid
+flowchart LR
 
-Representar as funcionalidades do cliente e do profissional, utilizando relações de <<include>> e <<extend>>.
+Cliente([Cliente])
+Profissional([Profissional])
+Pagamento[(Sistema de Pagamento)]
+
+UC1([Buscar Profissionais])
+UC2([Filtrar por Localização])
+UC3([Filtrar por Disponibilidade])
+UC4([Contratar Serviço])
+UC5([Liberar Pagamento])
+UC6([Avaliar Profissional])
+
+Cliente --> UC1
+Cliente --> UC4
+Cliente --> UC6
+
+Profissional --> UC4
+
+UC1 -. <<include>> .-> UC2
+UC1 -. <<include>> .-> UC3
+
+UC4 --> UC5
+UC5 --> Pagamento
+
+UC6 -. <<extend>> .-> UC5
+```
+
+### Explicação
+
+O caso de uso **Buscar Profissionais** possui duas relações `<<include>>`, pois a busca sempre exige os filtros de localização e disponibilidade. Já o caso de uso **Avaliar Profissional** utiliza `<<extend>>`, pois a avaliação é uma funcionalidade opcional após a conclusão do serviço e a liberação do pagamento.
 
 ---
 
+
 # Conclusão
 
-Os diagramas desenvolvidos permitem representar diferentes perspectivas de um sistema, facilitando a compreensão de sua estrutura, comportamento e interação entre os atores envolvidos.
+A realização desta atividade permitiu aplicar diferentes tipos de diagramas UML em cenários variados, reforçando a compreensão sobre quando utilizar cada modelo de acordo com o objetivo da modelagem.
+
+Os Diagramas de Casos de Uso possibilitaram identificar os atores envolvidos e as funcionalidades oferecidas pelo sistema, evidenciando também as interações com entidades externas. O Diagrama de Sequência demonstrou a ordem cronológica das mensagens trocadas entre os componentes de um sistema, enquanto o Diagrama de Atividades representou o fluxo de execução de um processo e suas decisões.
+
+Dessa forma, os exercícios contribuíram para consolidar os conceitos de modelagem de contexto e interação, auxiliando no desenvolvimento da capacidade de analisar sistemas sob diferentes perspectivas e selecionar o diagrama mais adequado para cada situação.
