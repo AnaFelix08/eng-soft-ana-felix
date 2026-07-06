@@ -83,15 +83,36 @@ O diagrama apresenta os principais atores envolvidos no processo de autoatendime
 
 ---
 
-# Cenário 3 – Sistema de Telemedicina
+# Cenário 3 – Sistema de Telemedicina (Monitoramento)
 
-## Diagrama utilizado
+## Diagrama de Sequência
 
-Diagrama de Sequência
+Neste cenário, um sensor cardíaco envia continuamente dados ao aplicativo móvel. Caso seja detectada alguma alteração, o aplicativo solicita ao servidor o histórico do paciente. Em seguida, o servidor envia um alerta imediato ao tablet do médico responsável.
 
-**Objetivo:**
+```mermaid
+sequenceDiagram
 
-Demonstrar a sequência de comunicação entre sensor, aplicativo, servidor e médico.
+participant Sensor as Sensor Cardíaco
+participant App as App Mobile
+participant Servidor
+participant Medico as Tablet do Médico
+
+Sensor->>App: Enviar dados cardíacos
+
+App->>App: Analisar sinais
+
+alt Alteração detectada
+    App->>Servidor: Solicitar histórico do paciente
+    Servidor-->>App: Retornar histórico
+    Servidor->>Medico: Enviar alerta imediato
+else Dados normais
+    App-->>Sensor: Monitoramento contínuo
+end
+```
+
+### Explicação
+
+O diagrama de sequência representa a ordem cronológica das mensagens trocadas entre os componentes do sistema. Ele evidencia que o sensor envia dados ao aplicativo, que realiza a análise inicial. Havendo uma alteração, o servidor é consultado para recuperar o histórico do paciente e, em seguida, envia um alerta ao médico para que possa tomar as providências necessárias.
 
 ---
 
