@@ -48,13 +48,38 @@ O diagrama evidencia a fronteira do sistema e mostra as integrações com sistem
 
 # Cenário 2 – Totem de Autoatendimento em Fast-Food
 
-## Diagrama utilizado
+## Diagrama de Casos de Uso
 
-Diagrama de Casos de Uso
+Neste cenário, o cliente realiza seu pedido diretamente no totem e efetua o pagamento via cartão ou PIX. Após a confirmação do pagamento, o pedido é enviado para a cozinha e os pontos de fidelidade do cliente são atualizados.
 
-**Objetivo:**
+```mermaid
+flowchart LR
 
-Representar as funcionalidades disponíveis para o cliente, cozinha e sistema de fidelidade.
+Cliente([Cliente])
+Cozinheiro([Cozinheiro])
+
+Pagamento[(Sistema de Pagamento<br/>PIX/Cartão)]
+Fidelidade[(Sistema de Fidelidade)]
+
+UC1([Realizar Pedido])
+UC2([Efetuar Pagamento])
+UC3([Enviar Pedido para Cozinha])
+UC4([Atualizar Pontos de Fidelidade])
+
+Cliente --> UC1
+Cliente --> UC2
+
+UC1 --> UC3
+UC2 --> Pagamento
+UC2 --> UC4
+
+UC3 --> Cozinheiro
+UC4 --> Fidelidade
+```
+
+### Explicação
+
+O diagrama apresenta os principais atores envolvidos no processo de autoatendimento: o Cliente, que realiza o pedido e o pagamento; o Cozinheiro, que recebe o pedido para preparo; o Sistema de Pagamento, responsável pela autorização da transação; e o Sistema de Fidelidade, que registra a pontuação do cliente após a compra.
 
 ---
 
