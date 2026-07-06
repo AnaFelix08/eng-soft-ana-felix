@@ -1,0 +1,29 @@
+sequenceDiagram
+
+actor Recepcionista
+
+participant Sistema
+participant Hospede
+participant Quarto
+participant Reserva
+
+Recepcionista->>Sistema: Buscar hóspede (Nome ou CPF)
+
+Sistema->>Hospede: Consultar cadastro
+
+alt Hóspede não encontrado
+    Recepcionista->>Sistema: Cadastrar hóspede
+    Sistema->>Hospede: Salvar dados
+end
+
+Recepcionista->>Sistema: Selecionar quarto
+
+Sistema->>Quarto: Verificar disponibilidade
+
+alt Quarto disponível
+    Sistema->>Reserva: Criar reserva
+    Sistema->>Quarto: Alterar status para Ocupado
+    Sistema-->>Recepcionista: Confirmar check-in
+else Quarto indisponível
+    Sistema-->>Recepcionista: Exibir conflito de reserva
+end
