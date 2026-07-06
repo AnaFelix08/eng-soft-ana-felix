@@ -1,0 +1,13 @@
+stateDiagram-v2
+
+[*] --> Livre
+
+Livre --> Reservado : Criar reserva
+
+Reservado --> Ocupado : Realizar check-in
+
+Livre --> Ocupado : Check-in imediato
+
+Ocupado --> Sujo : Realizar check-out
+
+Sujo --> Livre : Limpeza concluída
