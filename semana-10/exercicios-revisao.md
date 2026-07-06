@@ -118,13 +118,49 @@ O diagrama de sequência representa a ordem cronológica das mensagens trocadas 
 
 # Cenário 4 – Sistema de Controle de Acesso Inteligente
 
-## Diagrama utilizado
+## Diagrama de Atividades
 
-Diagrama de Atividades
+Neste cenário, o usuário aproxima o celular da porta. O aplicativo valida se existe uma reserva ativa para a sala de reuniões. Caso a reserva seja válida, um comando é enviado à fechadura eletrônica para liberar o acesso; caso contrário, o acesso é negado.
 
-**Objetivo:**
+```mermaid
+flowchart TD
 
-Representar o fluxo de atividades desde a aproximação do usuário até a abertura da porta.
+A([Início])
+
+subgraph Usuario
+B[Aproxima o celular]
+end
+
+subgraph App
+C[Receber identificação]
+D[Validar reserva]
+E{Reserva ativa?}
+end
+
+subgraph Hardware
+F[Enviar comando para fechadura]
+G[Destrancar porta]
+H[Negar acesso]
+end
+
+I([Fim])
+
+A --> B
+B --> C
+C --> D
+D --> E
+
+E -- Sim --> F
+F --> G
+G --> I
+
+E -- Não --> H
+H --> I
+```
+
+### Explicação
+
+O diagrama de atividades representa o fluxo de execução do processo de acesso à sala de reuniões. O usuário inicia a interação aproximando o celular, o aplicativo valida a existência de uma reserva ativa e, dependendo do resultado, o hardware libera ou bloqueia a abertura da porta.
 
 ---
 
