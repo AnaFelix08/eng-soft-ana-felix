@@ -25,5 +25,6 @@ Clique nos links abaixo para acessar os arquivos de cada semana:
 * 📄 [Semana 07 e 08 - Especificação e Validação de Requisitos - Hotel Bela Vista ](./semanas-07-e-08)
 * 📄 [Semana 09 - Modelagem de Sistemas e MDE - Hotel Bela Vista ](./semana-09)
 * 📄 [Semana 10 - Exercícios de Revisão de Modelagem de Sistema Arquivo ](./semana-10)
+* 📄 [Semana 11, 12 e 13 - Projeto de Arquitetura - Aula Invertida ](./semana-11)
 
 ---
